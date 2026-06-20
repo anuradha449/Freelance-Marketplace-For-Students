@@ -17,13 +17,15 @@ Follow these steps to run the project on your own computer.
 
 ---
 
-### Step 1: Clone the Repository
+Step 1: Clone the Repository
 
 Open your terminal (Command Prompt, PowerShell, or Git Bash) and run this command:
 
 ```bash
 git clone https://github.com/anuradha449/Freelance-Marketplace-For-Students.git
 cd Freelance-Marketplace-For-Students
+
+
 Step 2: Run the Backend (Spring Boot)
 Prerequisites: You must have Java 17+ and Maven installed.
 
@@ -40,6 +42,8 @@ The backend will start at: http://localhost:8086
 The H2 Database is available at: http://localhost:8086/h2-console
 
 Step 3: Run the Frontend (React + Vite)
+
+
 Prerequisites: You must have Node.js and npm installed.
 
 Open a new terminal window (keep the backend running in the first one).
