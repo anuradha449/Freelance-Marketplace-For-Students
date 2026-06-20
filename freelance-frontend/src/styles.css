@@ -1,0 +1,346 @@
+/* Reset */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body */
+
+body{
+
+  background:linear-gradient(
+      135deg,
+      #667eea,
+      #764ba2
+  );
+
+  min-height:100vh;
+
+}
+
+
+/* Navbar */
+
+.navbar{
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  gap:25px;
+
+  padding:18px;
+
+  background:rgba(255,255,255,0.15);
+
+  backdrop-filter:blur(10px);
+
+  box-shadow:0 4px 20px rgba(0,0,0,0.2);
+
+}
+
+.navbar a{
+
+  color:white;
+
+  text-decoration:none;
+
+  font-size:18px;
+
+  font-weight:bold;
+
+  transition:0.3s;
+
+}
+
+.navbar a:hover{
+
+  color:#ffd700;
+
+  transform:scale(1.1);
+
+}
+
+
+/* Common Container */
+
+.container{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+min-height:90vh;
+
+}
+
+
+/* Card */
+
+.card{
+
+background:white;
+
+padding:40px;
+
+width:420px;
+
+border-radius:20px;
+
+box-shadow:
+
+0 8px 25px rgba(0,0,0,0.2);
+
+text-align:center;
+
+transition:0.3s;
+
+}
+
+
+.card:hover{
+
+transform:translateY(-5px);
+
+}
+
+
+.card h1{
+
+margin-bottom:25px;
+
+color:#4f46e5;
+
+}
+
+
+/* Inputs */
+
+.card input{
+
+width:100%;
+
+padding:14px;
+
+margin:12px 0;
+
+border:none;
+
+outline:none;
+
+border-radius:10px;
+
+background:#f3f4f6;
+
+font-size:16px;
+
+}
+
+
+.card input:focus{
+
+border:2px solid #4f46e5;
+
+}
+
+
+/* Button */
+
+.card button{
+
+width:100%;
+
+padding:14px;
+
+margin-top:15px;
+
+background:#4f46e5;
+
+color:white;
+
+border:none;
+
+border-radius:10px;
+
+font-size:18px;
+
+cursor:pointer;
+
+transition:0.3s;
+
+}
+
+
+.card button:hover{
+
+background:#3730a3;
+
+transform:scale(1.03);
+
+}
+
+
+/* Home */
+
+.home{
+
+text-align:center;
+
+padding-top:100px;
+
+color:white;
+
+}
+
+.home h1{
+
+font-size:55px;
+
+margin-bottom:20px;
+
+}
+
+.home h2{
+
+font-size:32px;
+
+margin-bottom:20px;
+
+}
+
+.home p{
+
+font-size:22px;
+
+}
+
+
+/* Projects */
+
+.projects{
+
+padding:40px;
+
+}
+
+.project-card{
+
+background:white;
+
+padding:25px;
+
+margin-bottom:25px;
+
+border-radius:20px;
+
+box-shadow:
+
+0 5px 20px rgba(0,0,0,0.2);
+
+transition:0.3s;
+
+}
+
+
+.project-card:hover{
+
+transform:translateY(-5px);
+
+}
+
+
+.project-card h3{
+
+color:#4f46e5;
+
+margin-bottom:10px;
+
+font-size:28px;
+
+}
+
+
+.project-card p{
+
+margin:8px 0;
+
+font-size:18px;
+
+}
+
+
+/* Tables */
+
+table{
+
+width:100%;
+
+border-collapse:collapse;
+
+background:white;
+
+border-radius:15px;
+
+overflow:hidden;
+
+}
+
+
+th{
+
+background:#4f46e5;
+
+color:white;
+
+padding:15px;
+
+}
+
+
+td{
+
+padding:15px;
+
+text-align:center;
+
+}
+
+
+tr:nth-child(even){
+
+background:#f3f4f6;
+
+}
+
+
+/* Review Stars */
+
+.rating{
+
+font-size:30px;
+
+color:gold;
+
+}
+
+
+/* Footer */
+
+.footer{
+
+text-align:center;
+
+padding:20px;
+
+color:white;
+
+font-size:18px;
+
+}

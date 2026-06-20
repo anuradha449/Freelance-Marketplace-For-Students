@@ -1,0 +1,399 @@
+:root {
+  /* -------- Color Palette -------- */
+  --primary: #667eea;
+  --secondary: #764ba2;
+  --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+  /* -------- Card & UI -------- */
+  --card-bg: rgba(255, 255, 255, 0.92);
+  --card-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
+  --card-hover-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+  --radius: 20px;
+
+  /* -------- Text Colors -------- */
+  --text-main: #2d2d3f;
+  --text-muted: #666;
+  --text-white: #ffffff;
+
+  /* -------- Badge Colors -------- */
+  --badge-pending-bg: #fef3c7;
+  --badge-pending-text: #92400e;
+  --badge-completed-bg: #d1fae5;
+  --badge-completed-text: #065f46;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* -------- Body & Background -------- */
+body {
+  background: var(--bg-gradient);
+  min-height: 100vh;
+  color: var(--text-main);
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* -------- Custom Scrollbar -------- */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+/* -------- Navbar -------- */
+/* -------- Navbar -------- */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px 30px;
+  padding: 18px 40px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+.navbar a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 40px;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+.navbar a:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* ✅ Active Tab Highlight */
+.navbar a.active {
+  color: white;
+  background: rgba(255, 255, 255, 0.15);
+  font-weight: 600;
+}
+
+/* ✅ Logout Button */
+.navbar .logout-btn {
+  background: rgba(255, 59, 59, 0.2);
+  border: 1px solid rgba(255, 59, 59, 0.2);
+  padding: 10px 20px;
+  border-radius: 40px;
+  color: #ff8a8a;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.navbar .logout-btn:hover {
+  background: rgba(255, 59, 59, 0.3);
+  color: white;
+  transform: scale(1.05);
+}
+
+/* -------- Universal Container -------- */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding: 40px 20px;
+  animation: fadeIn 0.6s ease;
+}
+
+/* -------- Modern Card -------- */
+.card {
+  background: var(--card-bg);
+  padding: 45px 35px;
+  width: 100%;
+  max-width: 480px;
+  border-radius: var(--radius);
+  box-shadow: var(--card-shadow);
+  backdrop-filter: blur(10px);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--card-hover-shadow);
+}
+
+.card h1 {
+  background: var(--bg-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 25px;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+/* -------- Inputs -------- */
+.card input,
+.card textarea {
+  width: 100%;
+  padding: 14px 18px;
+  margin: 10px 0;
+  border: 2px solid rgba(0, 0, 0, 0.06);
+  border-radius: 12px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  background: #f8f9fa;
+  color: var(--text-main);
+}
+
+.card input:focus,
+.card textarea:focus {
+  border-color: var(--primary);
+  outline: none;
+  background: white;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.15);
+}
+
+.card textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* -------- Buttons -------- */
+.card button {
+  width: 100%;
+  padding: 15px;
+  margin-top: 20px;
+  background: var(--bg-gradient);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  letter-spacing: 0.5px;
+}
+
+.card button:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
+}
+
+.card button:active {
+  transform: scale(0.98);
+}
+
+/* -------- Home Page -------- */
+.home {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--text-white);
+  animation: fadeIn 1s ease;
+}
+
+.home h1 {
+  font-size: 52px;
+  margin-bottom: 15px;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(to right, #ffffff, #f0f0ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.home h2 {
+  font-size: 28px;
+  margin-bottom: 25px;
+  font-weight: 400;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.home p {
+  font-size: 20px;
+  line-height: 2.2;
+}
+
+/* -------- Project & Bid Grids -------- */
+.projects {
+  padding: 40px 20px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.projects h1 {
+  color: var(--text-white);
+  text-align: center;
+  font-size: 44px;
+  margin-bottom: 40px;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  letter-spacing: -1px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+/* -------- Project Cards (Glassy) -------- */
+.project-card {
+  background: var(--card-bg);
+  padding: 28px;
+  border-radius: var(--radius);
+  box-shadow: var(--card-shadow);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  text-align: left;
+  animation: slideUp 0.6s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: var(--card-hover-shadow);
+}
+
+.project-card h3 {
+  color: var(--secondary);
+  margin-bottom: 12px;
+  font-size: 24px;
+}
+
+.project-card p {
+  margin: 8px 0;
+  font-size: 16px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* -------- Status Badges -------- */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 16px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 12px;
+}
+
+.status-badge.pending {
+  background: var(--badge-pending-bg);
+  color: var(--badge-pending-text);
+}
+
+.status-badge.completed {
+  background: var(--badge-completed-bg);
+  color: var(--badge-completed-text);
+}
+
+/* -------- Animations -------- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* -------- Alerts (Success/Error) -------- */
+.alert {
+  padding: 14px 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  text-align: center;
+  animation: fadeIn 0.4s ease;
+}
+
+.alert-success {
+  background: #d1fae5;
+  color: #065f46;
+  border: 1px solid #10b981;
+}
+
+.alert-error {
+  background: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #ef4444;
+}
+
+/* -------- Responsive Tweaks -------- */
+@media (max-width: 768px) {
+  .navbar {
+    gap: 8px 12px;
+  }
+
+  .navbar a {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+
+  .card {
+    padding: 30px 20px;
+  }
+
+  .card h1 {
+    font-size: 24px;
+  }
+
+  .home h1 {
+    font-size: 34px;
+  }
+
+  .projects h1 {
+    font-size: 30px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home p {
+    font-size: 18px;
+  }
+}
