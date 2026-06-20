@@ -157,23 +157,3 @@ GitHub: [anuradha449](https://github.com/anuradha449)
 
 ---
 
-### ✅ Step 2: Push it to GitHub
-
-1. Open your `README.md` file in VS Code.
-2. **Delete everything** currently in it.
-3. **Paste the text above** into it.
-4. Save the file (`Ctrl + S`).
-5. In your VS Code terminal, run these commands:
-
-```bash
-git add README.md
-git commit -m "Updated README with final clean formatting"
-git push
-```
-
----
-
-### 🎉 Final Check:
-Go to your GitHub repository and **refresh the page** (`F5`). 
-
-Now it will look **absolutely beautiful**, with bold headings, proper code blocks, and a nice table for the login credentials! You are completely done. 🚀
